@@ -1,9 +1,9 @@
 [base]
-datasets = ["demo"]
+datasets = ["local", "national"]
 
 [table]
 
-[table.demo]
+[table.local]
 file_ext = "csv"
 data_dir = "screening/local/"
 table_name = "SCREENING_LOCAL"
@@ -13,7 +13,31 @@ skip_rows = 1
 field_delimiter = '\t'
 encoding = "UTF-16LE"
 
-[table.demo.columns]
+[table.local.columns]
+"Organisation Code" = "VARCHAR"
+"Organisation Name" = "VARCHAR"
+"Programme" = "VARCHAR"
+"Month of Date" = "VARCHAR"
+"Cohort Age Range" = "VARCHAR"
+"Cohort Description" = "VARCHAR"
+"Denominator Name" = "VARCHAR"
+"Denominator" = "VARCHAR"
+"Numerator" = "VARCHAR"
+"Performance" = "VARCHAR"
+"Acceptable" = "VARCHAR"
+"Achievable" = "VARCHAR"
+
+[table.national]
+file_ext = "csv"
+data_dir = "screening/national/"
+table_name = "SCREENING_NATIONAL"
+skip_rows = 1
+
+#Optional fields
+field_delimiter = '\t'
+encoding = "UTF-16LE"
+
+[table.national.columns]
 "Organisation Code" = "VARCHAR"
 "Organisation Name" = "VARCHAR"
 "Programme" = "VARCHAR"
