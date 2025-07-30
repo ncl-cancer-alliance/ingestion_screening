@@ -193,7 +193,7 @@ custom_columns = False
 #Process each dataset indivdually
 for ds in datasets:
 
-    print(f"\nProcessing {ds} data:\n")
+    print(f"\n\nProcessing {ds} data:\n")
 
     #Get the latest data file
     file_ext = config["table"][ds]["file_ext"]
